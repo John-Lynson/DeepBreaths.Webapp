@@ -8,13 +8,10 @@ const domain = import.meta.env.VITE_AUTH0_DOMAIN;
 const clientId = import.meta.env.VITE_AUTH0_CLIENT_ID;
 const audience = import.meta.env.VITE_AUTH0_AUDIENCE;
 
-console.log("Auth0 Domain:", domain);
-console.log("Auth0 Client ID:", clientId);
-console.log("Auth0 Audience:", audience);
-
-if (!domain || !clientId || !audience) {
-    console.error("Auth0 environment variables are missing!");
-}
+console.log("Auth0 Config:");
+console.log("Domain:", import.meta.env.VITE_AUTH0_DOMAIN);
+console.log("Client ID:", import.meta.env.VITE_AUTH0_CLIENT_ID);
+console.log("Audience:", import.meta.env.VITE_AUTH0_AUDIENCE);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
